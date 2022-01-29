@@ -41,7 +41,7 @@ imageList = [
 
 pc.defineParameter("osImage", "Select OS image",
                    portal.ParameterType.IMAGE,
-                   imageList[1], imageList,
+                   imageList[3], imageList,
                    longDescription="Most clusters have this set of images, " +
                    "pick your favorite one.")
 
