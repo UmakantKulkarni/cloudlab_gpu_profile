@@ -23,7 +23,7 @@ if [[ -f /.setup-done ]]; then
   exit
 fi
 
-cd /opt/scripts && git pull
+cd /opt && git clone https://github.com/UmakantKulkarni/scripts
 
 apt-get update && apt-get -y upgrade && apt-get update
 
