@@ -73,7 +73,7 @@ pc.defineParameter("bestEffort",  "Best Effort", portal.ParameterType.BOOLEAN, F
 
 # Optional ephemeral blockstore
 pc.defineParameter("tempFileSystemSize", "Temporary Filesystem Size",
-                   portal.ParameterType.INTEGER, 200,advanced=True,
+                   portal.ParameterType.INTEGER, 0,advanced=True,
                    longDescription="The size in GB of a temporary file system to mount on each of your " +
                    "nodes. Temporary means that they are deleted when your experiment is terminated. " +
                    "The images provided by the system have small root partitions, so use this option " +
@@ -82,7 +82,7 @@ pc.defineParameter("tempFileSystemSize", "Temporary Filesystem Size",
                    
 # Instead of a size, ask for all available space. 
 pc.defineParameter("tempFileSystemMax",  "Temp Filesystem Max Space",
-                    portal.ParameterType.BOOLEAN, False,
+                    portal.ParameterType.BOOLEAN, True,
                     advanced=True,
                     longDescription="Instead of specifying a size for your temporary filesystem, " +
                     "check this box to allocate all available disk space. Leave the size above as zero.")
