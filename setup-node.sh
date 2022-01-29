@@ -29,16 +29,19 @@ apt-get update && apt-get -y upgrade && apt-get update
 
 apt -y install curl wget apache2-utils default-jre default-jdk wget git vim nano make g++ net-tools iproute2 libssl-dev tcpdump jq iputils-ping apt-transport-https nghttp2-client bash-completion xauth gcc autoconf libtool pkg-config sshpass python3 python3-setuptools python3-pip qt5-default
 
-pip3 install h2 numpy scipy pandas matplotlib scikit-learn gdown pyqt5 opencv-python
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux--ppc64le.sh -O miniconda.sh
 
-# cuda driver
-if lspci | grep -q -i nvidia; then
-  apt-get purge -y nvidia* libnvidia*
-  apt-get install -y linux-headers-$(uname -r)
-  apt-get install -y nvidia-headless-470-server nvidia-utils-470-server
+bash miniconda.sh
 
-  rmmod nouveau || true
-  modprobe nvidia || true
-fi
+rm miniconda.sh
+echo export IBM_POWERAI_LICENSE_ACCEPT=yes >> ~/.bashrc
+source ~/.bashrc
+
+conda config --add default_channels https://repo.anaconda.com/pkgs/main
+conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/software/server/ibm-ai/conda/
+
+conda create -n ai python=3.7
+conda activate ai
+conda install --strict-channel-priority tensorflow-gpu
 
 echo "Finished running setup-node.sh"
