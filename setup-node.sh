@@ -29,7 +29,7 @@ apt -y install curl wget apache2-utils default-jre default-jdk wget git vim nano
 
 cd /opt && git clone https://github.com/UmakantKulkarni/scripts
 
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux--ppc64le.sh -O miniconda.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.10.3-Linux-ppc64le.sh -O miniconda.sh
 
 bash miniconda.sh
 
@@ -43,5 +43,8 @@ conda config --prepend channels https://public.dhe.ibm.com/ibmdl/export/pub/soft
 conda create -n ai python=3.7
 conda activate ai
 conda install --strict-channel-priority tensorflow-gpu
+
+pip3 install gdown
+conda install -c conda-forge matplotlib-base pandas scikit-learn
 
 echo "Finished running setup-node.sh"
