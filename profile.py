@@ -128,7 +128,7 @@ for i in range(params.nodeCount):
         name = "node" + str(i)
         node = request.RawPC(name)
         node.addService(
-            rspec.Execute(
+            pg.Execute(
                 shell="bash",
                 command="/local/repository/setup-node.sh {} {}".format(
                     params.project_group_name, params.user_names)
