@@ -23,11 +23,11 @@ if [[ -f /.setup-done ]]; then
   exit
 fi
 
-cd /opt && git clone https://github.com/UmakantKulkarni/scripts
-
 apt-get update && apt-get -y upgrade && apt-get update
 
 apt -y install curl wget apache2-utils default-jre default-jdk wget git vim nano make g++ net-tools iproute2 libssl-dev tcpdump jq iputils-ping apt-transport-https nghttp2-client bash-completion xauth gcc autoconf libtool pkg-config sshpass python3 python3-setuptools python3-pip qt5-default
+
+cd /opt && git clone https://github.com/UmakantKulkarni/scripts
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux--ppc64le.sh -O miniconda.sh
 
