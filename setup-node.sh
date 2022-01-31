@@ -31,10 +31,9 @@ cd /opt && git clone https://github.com/UmakantKulkarni/scripts
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.10.3-Linux-ppc64le.sh -O miniconda.sh
 
-bash miniconda.sh
+bash miniconda.sh -b -p /mydata/miniconda3
 
 rm miniconda.sh
-echo export IBM_POWERAI_LICENSE_ACCEPT=yes >> ~/.bashrc
 source ~/.bashrc
 
 conda config --add default_channels https://repo.anaconda.com/pkgs/main
