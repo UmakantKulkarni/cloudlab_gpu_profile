@@ -11,7 +11,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.10.3-Linux-ppc64le.sh
 bash miniconda.sh -b -p /mydata/miniconda3
 
 rm miniconda.sh
-export 'PATH="/mydata/miniconda3/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="/mydata/miniconda3/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 conda init bash
