@@ -67,3 +67,13 @@ echo "Finished running setup-node.sh"
 
 
 #One or more modprobe configuration files to disable Nouveau have been written.  For some distributions, this may be sufficient to disable Nouveau; other distributions may require modification of the initial ramdisk.  Please reboot your system and attempt NVIDIA driver installation again.  Note if you later wish to reenable Nouveau, you will need to delete these files: /usr/lib/modprobe.d/nvidia-installer-disable-nouveau.conf, /etc/modprobe.d/nvidia-installer-disable-nouveau.conf   
+
+#If you want following packages to be installed:
+cd /mydata
+conda activate ai
+git clone https://github.com/helpsystems/pcapy
+cd pcapy
+#Open setup.py file and comment lines for ._init_posix and save
+python3 setup.py install
+pip3 install impacket
+pip3 install scapy
