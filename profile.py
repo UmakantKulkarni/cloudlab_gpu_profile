@@ -35,6 +35,7 @@ imageList = [
     ('urn:publicid:IDN+utah.cloudlab.us+image+sfcs-PG0:sfc_u20_5g_k8s', 'UBUNTU 20.04 K8s 5G'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU18-64-STD', 'UBUNTU 18.04'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-STD', 'UBUNTU 20.04'),
+    ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD', 'UBUNTU22-64-STD'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU16-64-STD', 'UBUNTU 16.04'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//CENTOS7-64-STD',  'CENTOS 7'),
     ('urn:publicid:IDN+emulab.net+image+emulab-ops//FBSD112-64-STD', 'FreeBSD 11.2')]
