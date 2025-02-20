@@ -74,6 +74,14 @@ pc.defineParameter("bestEffort",  "Best Effort", portal.ParameterType.BOOLEAN, F
                     "This options tells the resource mapper to ignore bandwidth and assume you know what you " +
                     "are doing, just give me the lan I ask for (if enough nodes are available).")
 
+# Sometimes you want all of nodes on the same switch, Note that this option can make it impossible
+# for your experiment to map.
+pc.defineParameter("sameSwitch",  "No Interswitch Links", portal.ParameterType.BOOLEAN, False,
+                    advanced=True,
+                    longDescription="Sometimes you want all the nodes connected to the same switch. " +
+                    "This option will ask the resource mapper to do that, although it might make " +
+                    "it imppossible to find a solution. Do not use this unless you are sure you need it!")
+
 # Optional ephemeral blockstore
 pc.defineParameter("tempFileSystemSize", "Temporary Filesystem Size",
                    portal.ParameterType.INTEGER, 0,advanced=True,
@@ -85,7 +93,7 @@ pc.defineParameter("tempFileSystemSize", "Temporary Filesystem Size",
                    
 # Instead of a size, ask for all available space. 
 pc.defineParameter("tempFileSystemMax",  "Temp Filesystem Max Space",
-                    portal.ParameterType.BOOLEAN, True,
+                    portal.ParameterType.BOOLEAN, False,
                     advanced=True,
                     longDescription="Instead of specifying a size for your temporary filesystem, " +
                     "check this box to allocate all available disk space. Leave the size above as zero.")
